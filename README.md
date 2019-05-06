@@ -14,6 +14,8 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 ## 主要内容
 
+![cover](images/cover.png)
+
 1. 封面、扉页；
 2. 学位论文原创性声明和版权使用授权书；
 3. 中文摘要；
@@ -76,8 +78,16 @@ LaTeX利用设置好的模板，可以编译为格式统一的pdf。
 
 ## 编译
 
+`Linux`
+```bash
+# 单次编译
+make
+# 持续集成
+make pvc
+```
+或者
 请使用`xelatex`，对`csuthesis_main.tex`文件进行编译。
-
+Windows下可以使用`TexMaker`,`TexStudio`等IDE，选中`xelatex`编译器进行编译。
 使用高级文本编辑器，如sublime等，否则可能因为ANSI、UTF-8等编码格式问题编译失败。
 
 

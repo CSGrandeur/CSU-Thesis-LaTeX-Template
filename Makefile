@@ -20,12 +20,11 @@ $(THESIS).pdf : $(THESIS).tex $(TEX_DIR)/*.tex $(BIB_DIR)/*.bib CSUthesis.cls Ma
 pvc :
 	latexmk $(LATEXMK_OPT_PVC) $(THESIS)
 
-validate :
-	xelatex -no-pdf -halt-on-error $(THESIS)
-	biber --debug $(THESIS)
-
 view : $(THESIS).pdf
+#Mac user
 	open $<
+#Linux user
+	#xdg-open $<
 
 wordcount:
 	@texcount $(THESIS).tex -inc -ch-only | awk '/total/ {getline; print "纯中文字数\t\t\t:",$$4}'
@@ -38,13 +37,6 @@ clean :
 cleanall :
 	-@latexmk -C -silent 2> /dev/null
 	-@rm -f $(TEX_DIR)/*.aux 2> /dev/null || true
-
-s3 : $(THESIS).pdf
-	s3cmd put $< s3://sjtuthesis/README.pdf
-
-git :
-	git push --tags github; git push github;
-	git push --tags gitlab; git push gitlab;
 
 zip :
 	git archive --format zip --output thesis.zip master

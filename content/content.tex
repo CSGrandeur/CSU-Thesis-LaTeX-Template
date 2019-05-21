@@ -9,7 +9,7 @@ Word不难用，但是想用得漂亮还得费一番功夫。
 
 插入个图片，下面的说明文字是不是插入文本框？那文本框要不要跟图片“组合”？，是不是直接圈没法圈起来？因为图片要变成浮动格式，和文本框绑定后再改回嵌入格式，你说蛋疼不蛋疼？不组合？那有一定概率发生你的图片在上一页，描述文字在下一页。呵呵。
 
-插入参考文献，手动编辑？我的天哪，一百多个文献，中间插一个，怎么改序号？ 
+插入参考文献，手动编辑？我的天哪，一百多个文献，中间插一个，怎么改序号？
 很好，可以用交叉引用，一个个编辑文献格式？
 很好，可以用endnote或者noteexpress的插入功能，你有没有发现插入是个宏，ctrl+z的时候会烦死你啊……
 叮叮！让我们祭出LaTeX！！，有bibliography，一个$\\cite$包打天下！不要太爽。
@@ -137,14 +137,14 @@ word里编辑三线表，啊烦躁。
     \begin{subfigure}[t]{0.13\linewidth}
         \caption{}
         \begin{minipage}[b]{1\linewidth}
-        \includegraphics[width=1\linewidth]{csu.png} \vspace{-1ex} \vfill 
+        \includegraphics[width=1\linewidth]{csu.png} \vspace{-1ex} \vfill
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
     \end{subfigure}
     \begin{subfigure}[t]{0.13\linewidth}
         \caption{}
         \begin{minipage}[b]{1\linewidth}
-        \includegraphics[width=1\linewidth]{csu.png} \vspace{-1ex} \vfill 
+        \includegraphics[width=1\linewidth]{csu.png} \vspace{-1ex} \vfill
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
     \end{subfigure}
@@ -246,20 +246,47 @@ LaTeX\cite{lamport1994latex}插入参考文献最方便的方式是使用bibliog
 
 \section{总结与展望}
 
-XX的XX都存在XX，所以我们XX，本章总结XX。
+\noindent{纯数字编号}
+\begin{enumerate}
+ \item XXXXXXXXXX
+ \label{item1}
+ \item XXXXXXXXXX
+ \item XXXXXXXXXX
+\end{enumerate}
+罗马编号
+\begin{enumerate}[label=(\roman*)]
+ \item XXXXXXXXXX
+ \label{item2}
+ \item XXXXXXXXXX
+ \item XXXXXXXXXX
+\end{enumerate}
+括号编号
+\begin{enumerate}[label=(\arabic*)]
+ \item XXXXXXXXXX
+ \label{item3}
+ \item XXXXXXXXXX
+ \item XXXXXXXXXX
+\end{enumerate}
+半括号编号
+\begin{enumerate}[label=\arabic*)]
+ \item XXXXXXXXXX
+ \label{item4}
+ \item XXXXXXXXXX
+ \item XXXXXXXXXX
+\end{enumerate}
+小字母编号
+\begin{enumerate}[label=\alph*)]
+ \item XXXXXXXXXX
+ \label{item5}
+ \item XXXXXXXXXX
+ \item XXXXXXXXXX
+\end{enumerate}
 
-\subsection{本文工作总结}
-在总结和分析已有XX的理论基础上，本文对XX进行了XX，主要工作如下：
-
-（1）图片插入布局，如第\ref{sec.figure}章所示。
-
-（2）XXXXXXXXXX
-
-（3）XXXXXXXXXX
-
-（4）XXXXXXXXXX
+引用测试,正如\ref{item1}、\ref{item2}、\ref{item3}、\ref{item4}、\ref{item5}所示
 
 \subsection{工作展望}
+手动编号 %（不推荐,无法被交叉引用）
+\par
 本课题针对XX，鉴于XXX，对XX进行了提高，但是XXX，所以有如下XX：
 
 （1）目前XX虽然XX，但是XX仍然XX，所以XX仍然是一个值得XX的问题。

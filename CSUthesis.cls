@@ -88,6 +88,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \RequirePackage{ulem}
 % % 尺寸计算
 % \RequirePackage{calc}
+% 算法编号
+\RequirePackage{algorithm}
 
 % 参考文献格式 GBT7714-2005
 % 来自https://github.com/CTeX-org/gbt7714-bibtex-style
@@ -539,6 +541,17 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \renewcommand{\thetable}{\arabic{section}-\arabic{table}}
 % \renewcommand {\thetable} {\thesection-\arabic{table}}
 \captionsetup[table]{
+	format=plain,      % 标题从第二行开始是否缩进，plain无缩进，hang有缩进
+	labelsep=quad,     % 分隔符是一个空格
+	font={kai,five},   % 表的字体, 宋体小四
+	position=top
+}
+% 算法
+% ------------------------------------------------------%
+\floatname{algorithm}{算法}
+\renewcommand{\thealgorithm}{\arabic{section}-\arabic{algorithm}}
+% \renewcommand {\thealgorithm} {\thesection-\arabic{algorithm}}
+\captionsetup[algorithm]{
 	format=plain,      % 标题从第二行开始是否缩进，plain无缩进，hang有缩进
 	labelsep=quad,     % 分隔符是一个空格
 	font={kai,five},   % 表的字体, 宋体小四

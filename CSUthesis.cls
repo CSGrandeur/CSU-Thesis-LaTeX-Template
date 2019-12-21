@@ -35,6 +35,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{geometry}
 % 数学宏包
 \RequirePackage{amsmath}
+\RequirePackage{ntheorem}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 \RequirePackage{bm}
@@ -590,19 +591,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % 数学环境, 定理等设置 %
 % -------------------------------------------------------%
-\newtheorem{definition}{\csu@cap@definition}
-\newtheorem{theorem}{\csu@cap@theorem}
-\newtheorem{lemma}{\csu@cap@lemma}
-\newtheorem{corollary}{\csu@cap@corollary}
-\newtheorem{assumption}{\csu@cap@assumption}
-\newtheorem{conjecture}{\csu@cap@conjecture}
-\newtheorem{axiom}{\csu@cap@axiom}
-\newtheorem{principle}{\csu@cap@principle}
-\newtheorem{problem}{\csu@cap@problem}
-\newtheorem{example}{\csu@cap@example}
-\newtheorem{proof}{\csu@cap@proof}
-\newtheorem{solution}{\csu@cap@solution}
-
 % 数学定理相关的常量
 \newcommand*{\csu@cap@definition}{定义}
 \newcommand*{\csu@cap@theorem}{定理}
@@ -616,6 +604,21 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand*{\csu@cap@example}{例}
 \newcommand*{\csu@cap@proof}{证明}
 \newcommand*{\csu@cap@solution}{解}
+
+\newtheorem{definition}{\csu@cap@definition}
+\newtheorem{theorem}{\csu@cap@theorem}
+\newtheorem{lemma}{\csu@cap@lemma}
+\newtheorem{corollary}{\csu@cap@corollary}
+\newtheorem{assumption}{\csu@cap@assumption}
+\newtheorem{conjecture}{\csu@cap@conjecture}
+\newtheorem{axiom}{\csu@cap@axiom}
+\newtheorem{principle}{\csu@cap@principle}
+\newtheorem{problem}{\csu@cap@problem}
+\newtheorem{example}{\csu@cap@example}
+\newtheorem*{proof}{\it{\csu@cap@proof}}
+\newtheorem{solution}{\csu@cap@solution}
+
+
 
 % 编号分章节。如需要连续编号，注释\makeatletter下面对应内容即可。
 \renewcommand{\theequation}{\arabic{section}-\arabic{equation}}

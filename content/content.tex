@@ -3,6 +3,8 @@
 \section{绪论}
 \subsection{研究背景与意义}
 
+\subsubsection{研究背景}
+
 Word不难用，但是想用得漂亮还得费一番功夫。
 
 对于小白来说，（注意！！是对于小白来说，不要跟我杠！！！我就是word小白，高端玩法玩不动）：
@@ -23,6 +25,18 @@ word里编辑三线表，啊烦躁。
 让我们，专心写论文好不好？
 
 爱你们。
+
+\paragraph{Latex 起源}
+
+等等等等……
+
+\subparagraph{Latex 诞生地}
+
+等等等等……
+
+\subparagraph{Latex 创始人}
+
+等等等等……
 
 
 \subsection{主要研究工作}
@@ -56,7 +70,7 @@ word里编辑三线表，啊烦躁。
 
 \section{图像布局}
 \label{sec.figure}
-\textbf{按学校格式要求，每个子图的小标(a)、(b)、(c)等在【左上角】。}
+\textbf{按学校格式要求，每个子图的小标(a)、(b)、(c)等在【左下角】。}
 
 \subsection{单图布局}
 
@@ -73,33 +87,34 @@ word里编辑三线表，啊烦躁。
 
 \subsection{横排布局}
 
-\textbf{横排布局如图\ref{F.csu_row}所示。}
+\textbf{横排布局如图\ref{F.csu_row}所示。}子图引用如图\ref{f:subfig}。
 
 \begin{figure}[!htb]
     \centering
     \begin{subfigure}[t]{0.24\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
+        \label{f:subfig}
     \end{subfigure}
     \begin{subfigure}[t]{0.24\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}
     \begin{subfigure}[t]{0.24\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}
     \begin{subfigure}[t]{0.24\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}
     \caption{横排布局示例}
     \label{F.csu_row}
@@ -113,16 +128,16 @@ word里编辑三线表，啊烦躁。
 \begin{figure}[!htb]
     \centering
     \begin{subfigure}[t]{0.15\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}\\
     \begin{subfigure}[t]{0.15\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}
     \caption{竖排布局示例}
     \label{F.csu_col}
@@ -135,18 +150,18 @@ word里编辑三线表，啊烦躁。
 \begin{figure}[!htb]
     \centering
     \begin{subfigure}[t]{0.13\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=1\linewidth]{csu.png} \vspace{-1ex} \vfill
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}
     \begin{subfigure}[t]{0.13\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=1\linewidth]{csu.png} \vspace{-1ex} \vfill
         \includegraphics[width=1\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}
     \caption{竖排多图横排布局}
     \label{F.csu_col_row}
@@ -162,18 +177,18 @@ word里编辑三线表，啊烦躁。
 \begin{figure}[!htb]
     \centering
     \begin{subfigure}[t]{0.3\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=0.45\linewidth]{csu.png}
         \includegraphics[width=0.45\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}\\
     \begin{subfigure}[t]{0.3\linewidth}
-        \caption{}
         \begin{minipage}[b]{1\linewidth}
         \includegraphics[width=0.45\linewidth]{csu.png}
         \includegraphics[width=0.45\linewidth]{csu.png}
         \end{minipage}
+        \caption{}
     \end{subfigure}
     \caption{横排多图竖排布局}
     \label{F.csu_row_col}
@@ -247,35 +262,35 @@ LaTeX\cite{lamport1994latex}插入参考文献最方便的方式是使用bibliog
 \section{总结与展望}
 
 \noindent{纯数字编号}
-\begin{enumerate}
+\begin{enumerate}[leftmargin=2em]
  \item XXXXXXXXXX
  \label{item1}
  \item XXXXXXXXXX
  \item XXXXXXXXXX
 \end{enumerate}
 罗马编号
-\begin{enumerate}[label=(\roman*)]
+\begin{enumerate}[label=(\roman*),leftmargin=2em]
  \item XXXXXXXXXX
  \label{item2}
  \item XXXXXXXXXX
  \item XXXXXXXXXX
 \end{enumerate}
 括号编号
-\begin{enumerate}[label=(\arabic*)]
+\begin{enumerate}[label=(\arabic*),leftmargin=2em]
  \item XXXXXXXXXX
  \label{item3}
  \item XXXXXXXXXX
  \item XXXXXXXXXX
 \end{enumerate}
 半括号编号
-\begin{enumerate}[label=\arabic*)]
+\begin{enumerate}[label=\arabic*),leftmargin=2em]
  \item XXXXXXXXXX
  \label{item4}
  \item XXXXXXXXXX
  \item XXXXXXXXXX
 \end{enumerate}
 小字母编号
-\begin{enumerate}[label=\alph*)]
+\begin{enumerate}[label=\alph*),leftmargin=2em]
  \item XXXXXXXXXX
  \label{item5}
  \item XXXXXXXXXX

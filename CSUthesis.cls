@@ -432,7 +432,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 目录应列出论文的大标题、一级和二级节标题，逐项标明页码（具体见样例10）。各级标题应简明扼要、点出各部分主要内容。学位论文的页码编排为：正文和后置部分用阿拉伯数字编连续码，前置部分用罗马数字单独编连续码（封面除外）。
 % “目录”两字居中（三号黑体），下空两行为章、节、小节及其开始页码（靠右顶格）。章、节、小节分别以阶梯式排列：1（第1章）、1.1、1.1.1依次标出。章、节、小节的题名与页码之间用“．．．．．．”连接。除“目录”两字外，其余字体均为小四号宋体。
 
-\setcounter{secnumdepth}{3}
+\setcounter{secnumdepth}{4}
 % 定义作为标题的格式
 % \titleformat{command}[shape]%定义标题类型和标题样式
 %               {format}%定义标题格式
@@ -443,6 +443,9 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \titleformat{\section}{\zihao{3} \bfseries \heiti}{\thesection}{1em}{}
 \titleformat{\subsection}{\zihao{4} \bfseries \heiti}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\zihao{-4} \bfseries \songti}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}{\zihao{-4} \songti}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}{\zihao{-4} \bfseries \songti}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph} {2em}{0.5em}{0pt}
 % 定义在目录中的格式
 % \titlecontents{标题名}
 %               [左间距]
@@ -529,6 +532,15 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \DeclareCaptionFont{five}{\zihao{5}}
 \renewcommand{\thefigure}{\arabic{section}-\arabic{figure}}
 % \renewcommand{\thefigure} {\thesection-\arabic{figure}}
+
+%\captionsetup[subfigure]{labelfont=bf,labelsep=period,labelformat=mysublabelfmt}
+\renewcommand\p@subfigure{\thefigure{-}}
+%\renewcommand\thesubfigure{\alph{subfigure})}
+%\DeclareCaptionLabelFormat{mysublabelfmt}{\alph{sub\@captype}}
+
+% If desired for table as well:
+% \renewcommand\p@subtable{\thetable\,}
+% \renewcommand\thesubtable{\alph{subtable})}
 
 \captionsetup[figure]{
 	format=plain,      % 标题从第二行开始是否缩进，plain无缩进，hang有缩进

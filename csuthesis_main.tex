@@ -114,9 +114,11 @@
 \renewcommand{\headrulewidth}{1pt}
 
 % 去掉页眉章节序号后面的“.”
-\renewcommand{\sectionmark}[1]{\markright{第{\thesection}章~ #1}}
+\renewcommand{\sectionmark}[1]{\markboth{第{\thesection}章~ #1}{第{\thesection}章~ #1}}
+\renewcommand{\subsectionmark}[1]{\markright{\leftmark}}
+\renewcommand{\subsubsectionmark}[1]{\markright{\leftmark}}
 
-\fancyhf[RH]{\songti \zihao{5} \rightmark} % 设置所有（奇数和偶数）右侧页眉
+\fancyhf[RH]{\songti \zihao{5} \leftmark} % 设置所有（奇数和偶数）右侧页眉net
 \fancyhf[LH]{\songti \zihao{5} 中南大学博士学位论文} % 设置所有（奇数和偶数）左侧页眉
 % 正文内容 
 % --------------------------------------------%
@@ -157,7 +159,9 @@
 \appendix
 
 % 主文件有代码去掉页眉章节编号的“.”，但这会因为bug导致无编号章节显示一个错误编号，所以这里在无编号章节之前再次重定义sectionmark。
-\renewcommand{\sectionmark}[1]{\markright{#1}}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{#1}}
+\renewcommand{\subsectionmark}[1]{\markright{\leftmark}}
+\renewcommand{\subsubsectionmark}[1]{\markright{\leftmark}}
 
 % section 标题从这里往后改为三号黑体居中
 \titleformat{\section}{\centering \zihao{3}\heiti}{\thesection}{1em}{}

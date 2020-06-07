@@ -3,20 +3,20 @@
 \section{绪论}
 \subsection{研究背景与意义}
 
-Word不难用，但是想用得漂亮还得费一番功夫。
+\app{Word} 不难用，但是想用得漂亮还得费一番功夫。
 
-对于小白来说，（注意！！是对于小白来说，不要跟我杠！！！我就是word小白，高端玩法玩不动）：
+对于小白来说，（注意！！是对于小白来说，不要跟我杠！！！我就是 \app{Word} 小白，高端玩法玩不动）：
 
-插入个图片，下面的说明文字是不是插入文本框？那文本框要不要跟图片“组合”？，是不是直接圈没法圈起来？因为图片要变成浮动格式，和文本框绑定后再改回嵌入格式，你说蛋疼不蛋疼？不组合？那有一定概率发生你的图片在上一页，描述文字在下一页。呵呵。
+插入个图片，下面的说明文字是不是插入文本框？那文本框要不要跟图片“组合”？是不是直接圈没法圈起来？因为图片要变成浮动格式，和文本框绑定后再改回嵌入格式，你说蛋疼不蛋疼？不组合？那有一定概率发生你的图片在上一页，描述文字在下一页。呵呵。
 
 插入参考文献，手动编辑？我的天哪，一百多个文献，中间插一个，怎么改序号？
 很好，可以用交叉引用，一个个编辑文献格式？
-很好，可以用endnote或者noteexpress的插入功能，你有没有发现插入是个宏，ctrl+z的时候会烦死你啊……
-叮叮！让我们祭出LaTeX！！，有bibliography，一个$\\cite$包打天下！不要太爽。
+很好，可以用 \app{endnote} 或者 \app{noteexpress} 的插入功能，你有没有发现插入是个宏，\oper{ctrl+z} 的时候会烦死你啊……
+叮叮！让我们祭出 \LaTeX！！，有 \env{bibliography}，一个 \pkg{cite} 包打天下！不要太爽。
 
-插入公式，对word小白来说，公式居中编号靠右就是一道百度搜索能力过滤器。
+插入公式，对 \app{Word} 小白来说，公式居中编号靠右就是一道百度搜索能力过滤器。
 
-word里编辑三线表，啊烦躁。
+\app{Word} 里编辑三线表，啊烦躁。
 
 等等等等……
 
@@ -26,7 +26,7 @@ word里编辑三线表，啊烦躁。
 
 
 \subsection{主要研究工作}
-我堂堂双一流高校竟然没有官方研究生论文LaTeX模板！！！虽然我LaTeX水平也很水……但是通过大量debug也勉强给大家凑出来一个格式绝对标准的LaTeX模板，模板代码丑就丑吧，能用就行。写了大量注释，有一点LaTeX基础就可以根据自己需要修改CSUthesis.cls文件。
+我堂堂双一流高校竟然没有官方研究生论文 \LaTeX 模板！！！虽然我 \LaTeX 水平也很水……但是通过大量 \oper{debug} 也勉强给大家凑出来一个格式绝对标准的 \LaTeX 模板，模板代码丑就丑吧，能用就行。写了大量注释，有一点 \LaTeX 基础就可以根据自己需要修改 \cls{CSUthesis.cls} 文件。
 
 (1) 提供图片插入示例。
 
@@ -56,13 +56,13 @@ word里编辑三线表，啊烦躁。
 
 \section{图像布局}
 \label{sec.figure}
-\textbf{按学校格式要求，每个子图的小标(a)、(b)、(c)等在【左上角】。}
+\emph{按学校格式要求，每个子图的小标(a)、(b)、(c)等在【左上角】。}
 
 \subsection{单图布局}
 
 \lipsum
 
-\textbf{单图布局如图\ref{F.csu_single}所示。}
+\emph{单图布局如图~\ref{F.csu_single} 所示。}
 
 \begin{figure}[hbt]
 \centering
@@ -73,7 +73,7 @@ word里编辑三线表，啊烦躁。
 
 \subsection{横排布局}
 
-\textbf{横排布局如图\ref{F.csu_row}所示。}
+\emph{横排布局如图~\ref{F.csu_row} 所示。}
 
 \begin{figure}[!htb]
     \centering
@@ -108,7 +108,7 @@ word里编辑三线表，啊烦躁。
 \lipsum
 
 \subsection{竖排布局}
-\textbf{竖排布局如图\ref{F.csu_col}所示。}
+\emph{竖排布局如图\ref{F.csu_col}所示。}
 
 \begin{figure}[!htb]
     \centering
@@ -152,7 +152,7 @@ word里编辑三线表，啊烦躁。
     \label{F.csu_col_row}
 \end{figure}
 
-\textbf{竖排多图横排布局如图\ref{F.csu_col_row}所示。注意看(a)、(b)编号与图关系。}
+\emph{竖排多图横排布局如图~\ref{F.csu_col_row} 所示。注意看(a)、(b)编号与图关系。}
 
 
 \subsection{横排多图竖排布局}
@@ -179,7 +179,7 @@ word里编辑三线表，啊烦躁。
     \label{F.csu_row_col}
 \end{figure}
 
-\textbf{横排多图竖排布局如图\ref{F.csu_row_col}所示。注意看(a)、(b)编号与图关系。}
+\emph{横排多图竖排布局如图~\ref{F.csu_row_col} 所示。注意看(a)、(b)编号与图关系。}
 
 \subsection{本章小结}
 本章示例图片布局。
@@ -209,7 +209,7 @@ word里编辑三线表，啊烦躁。
 \end{tabular}
 \end{table}
 
-\textbf{表格如表\ref{T.example}所示，latex表格技巧很多，这里不再详细介绍。}
+\emph{表格如表~\ref{T.example} 所示，\LaTeX 表格技巧很多，这里不再详细介绍。}
 
 \lipsum
 
@@ -219,16 +219,13 @@ word里编辑三线表，啊烦躁。
 
 \lipsum
 
-\textbf{公式插入示例如公式(\ref{E.example})所示。}
-
+\emph{公式插入示例如公式~\eqref{E.example} 所示。}
 \begin{equation}
-\gamma_{x}=
-\left\{
-  \begin{array}{lr}
-  0, & {\rm if}~~\;|x| \leq \delta \\
-  x, & {\rm otherwise}
-  \end{array}
-\right.
+\gamma_x=
+\begin{cases}
+  0, & \text{if $|x| \leq \delta$} \\
+  x, & \text{otherwise}
+\end{cases}
 \label{E.example}
 \end{equation}
 
@@ -237,7 +234,7 @@ word里编辑三线表，啊烦躁。
 
 \section{参考文献插入示例}
 
-LaTeX\cite{lamport1994latex}插入参考文献最方便的方式是使用bibliography\cite{pritchard1969statistical}，大多数出版商的论文页面都会有导出bib格式参考文献的链接，把每个文献的bib放入``thesis-references''，然后用bibkey即可插入参考文献。
+\LaTeX \cite{lamport1994latex}插入参考文献最方便的方式是使用 \env{bibliography}\cite{pritchard1969statistical}，大多数出版商的论文页面都会有导出 \format{bib} 格式参考文献的链接，把每个文献的 \format{bib} 放入 \bib{thesis-references.bib}，然后用 \oper{bibkey} 即可插入参考文献。
 
 \lipsum
 
@@ -282,11 +279,11 @@ LaTeX\cite{lamport1994latex}插入参考文献最方便的方式是使用bibliog
  \item XXXXXXXXXX
 \end{enumerate}
 
-引用测试,正如\ref{item1}、\ref{item2}、\ref{item3}、\ref{item4}、\ref{item5}所示
+引用测试,正如~\ref{item1}、\ref{item2}、\ref{item3}、\ref{item4}、\ref{item5} 所示
 
 \subsection{工作展望}
 手动编号 %（不推荐,无法被交叉引用）
-\par
+
 本课题针对XX，鉴于XXX，对XX进行了提高，但是XXX，所以有如下XX：
 
 （1）目前XX虽然XX，但是XX仍然XX，所以XX仍然是一个值得XX的问题。

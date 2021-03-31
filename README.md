@@ -1,7 +1,9 @@
 
 中南大学学位论文 LaTeX 模板交流 QQ群： 1057284351
 
-本项目为2016版格式，不再更新，最新版本可访问 https://github.com/lsyer/CSU-Thesis-LaTeX-Template
+# 本项目为2016版格式，不再更新
+
+最新版本可访问 https://github.com/lsyer/CSU-Thesis-LaTeX-Template
 
 
 # 中南大学学位论文Tex模版
